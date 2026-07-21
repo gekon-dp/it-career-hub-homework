@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: Inter, sans-serif;
+    box-sizing: border-box;
 }
 /* Headings styles */
 h1 {
@@ -45,9 +46,10 @@ h3 {
 div {
     background-color: #00ffff;
     padding: 8px;
-    margin: 8px 0px;
+    gap: 8px;
     border-radius: 8px;
-    justify-content: left;
+    display: flex;
+    flex-direction: column;
 }
 
 p {
