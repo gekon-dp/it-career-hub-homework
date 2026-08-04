@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 40px;
+}
+
+/* Task 1 */
+
+ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: orange;
+}
+
+.link-1:hover {
+    color: red;
+}
+
+.link-2:hover {
+    color: yellow;
+}
+
+.link-3:hover {
+    color: green;
+}
+
+
+/* Task 2 */
+.link-4:visited {
+    color: purple;
+}
+
+.link-5:visited {
+    color: brown;
+}
+
+.link-6:visited {
+    color: teal;
+}
+
+/* Task 3 */
+.task-3 h2 {
+    text-align: center;
+}
+
+.task-3>p:nth-child(odd) {
+    color: pink;
+}
+
+/* Task 4 */
+.task-4>h2::before {
+    content: "Это ";
+    color: blue;
+}
+
+.task-4>h2::after {
+    content: " надо сделать!";
+    color: red;
+}
+
+/* Task 5 */
+.task-5 h2 {
+    text-align: center;
+}
+
+.task-5>p:hover::first-line {
+    color: blueviolet;
+}
+
+/* Task 6 */
+button {
+    padding: 5px 10px;
+    background-color: rgb(94, 94, 209);
+    color: white;
+    border: 1px solid rgb(94, 94, 209);
+    transition: all 0.6s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    color: rgb(94, 94, 209);
+    background-color: white;
+}

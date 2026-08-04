@@ -1,0 +1,94 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #2f4f4f;
+}
+
+/* Container style */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #609ea0;
+    width: 250px;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+/* Headings styles */
+h1 {
+    font-size: 1.5rem;
+    padding-bottom: 7px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    font-size: 0.75rem;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+}
+
+.texts input {
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+/* Buttons styles */
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.75rem;
+}
+
+button[type="submit"] {
+    flex-grow: 1;
+    width: 50%;
+    background-color: #F0F0F0;
+}
+
+button[type="reset"] {
+    flex-grow: 1;
+    width: 50%;
+    background-color: #f08080;
+    border: 1px solid white;
+}
+
+/* Checkbox style */
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 0.75rem;
+}

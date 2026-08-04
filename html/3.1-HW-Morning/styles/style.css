@@ -1,0 +1,89 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+fieldset {
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: lightblue;
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Form styles */
+.unknown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.form-head {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-head input {
+    padding: 5px;
+}
+
+.form-middle {
+    display: flex;
+    gap: 10px;
+}
+
+.form-middle label {
+    font-size: 14px;
+}
+
+.gender,
+.notification {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+.form-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+/* Buttons styles */
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    width: 40%;
+    background-color: #3498db;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+    color: white;
+}

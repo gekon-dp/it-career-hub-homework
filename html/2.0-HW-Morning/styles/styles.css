@@ -1,0 +1,37 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* List styles */
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none; /* markers disable */
+}
+
+/* Product cars styling */
+.productCard {
+    padding: 20px 10px;
+}
+
+.productName1 {
+    background-color: red;
+}
+.productName2 {
+    background-color: orange;
+}
+.productName3 {
+    background-color: yellow;
+}
+.productName4 {
+    background-color: green;
+}
+.productName5 {
+    background-color: cyan;
+}

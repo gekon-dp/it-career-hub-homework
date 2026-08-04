@@ -1,0 +1,26 @@
+   0 ls -al
+   1 cd /home
+   2 mkdir animals
+   3 cd animals
+   4 mkdir dogs
+   5 mkdir cats
+   6 mkdir fish
+   7 cd dogs
+   8 touch pluto
+   9 cd ../cats
+  10 touch garfield
+  11 cd ../fish
+  12 touch nemo
+  13 cd /tmp
+  14 touch adam
+  15 cd /home
+  16 mkdir humans
+  17 cp /tmp/adam /home/humans/adam
+  18 cd /tmp
+  19 touch evA
+  20 mv evA /opt/eve
+  21 mv /opt/eve /home/humans/eve
+  22 cd /home/humans
+  23 ls -al
+  24 history > /tmp/histoty.txt&&export_file /tmp/history.txt
+  25 history> /tmp/history.txt && export_file /tmp/history.txt

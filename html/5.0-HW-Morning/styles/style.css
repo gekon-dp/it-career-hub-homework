@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+/* first variant */
+.container {
+  width: 660px;
+  min-height: 480px;
+  display: inline-grid;
+  background-color: #ffc0cb;
+  grid-template-columns: 120px 120px 120px;
+  grid-template-rows: 120px 120px 120px;
+  gap: 40px 100px;
+}
+
+/* second variant */
+/* .container {
+  width: 1120px;
+  min-height: 100vh;
+  display: inline-grid;
+  background-color: #ffc0cb;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 150px;
+  padding-right: 150px;
+  padding-bottom: 40px;
+} */
+
+.card {
+  background-color: #87ceeb;
+  border-radius: 10px;
+  padding: 10px;
+}

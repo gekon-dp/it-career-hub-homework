@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.btn {
+    background-color: #4b7bec;
+    border: 1px solid #4b7bec;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    min-width: 120px;
+    transition: all 0.6s ease;
+}
+
+.btn::after {
+    content: "\000a0- кнопка нажата";
+    max-width: 0;
+    opacity: 0;
+    display: inline-block;
+    white-space: nowrap;
+    transition: max-width 0.6s ease, opacity 0.6s ease;
+}
+
+.btn:hover {
+    background-color: white;
+    border: 1px dotted #4b7bec;
+    color: #4b7bec;
+}
+
+.btn:hover:active {
+    background-color: white;
+    border: 1px solid #4b7bec;
+    color: #4b7bec;
+}
+
+.btn:hover:active::after {
+    max-width: 150px;
+    opacity: 1;
+}
