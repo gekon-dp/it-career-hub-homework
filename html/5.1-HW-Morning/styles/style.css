@@ -15,8 +15,9 @@ body {
 /* Container */
 .container {
   display: flex;
+  width: 100%;
   max-width: 1440px;
-  height: 760px;
+  min-height: 760px;
   background-color: #fff9e5;
   gap: 32px;
   padding: 16px;
@@ -79,6 +80,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-width: 0;
   gap: 32px;
   padding: 16px;
 }
@@ -91,6 +93,8 @@ body {
 .main > p {
   font-size: 20px;
   color: black;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 @media screen and (max-width: 768px) {
