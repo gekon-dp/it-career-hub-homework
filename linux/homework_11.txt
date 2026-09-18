@@ -1,0 +1,17 @@
+#!/bin/bash
+TARGET_DIR="/opt/100726-wdm"
+
+echo "=== Проверка директории $TARGET_DIR ==="
+
+if [ ! -d "$TARGET_DIR" ]; then
+    echo "Ошибка: Директория не существует!"
+    exit 1
+fi
+
+# Ищем .sh файлы на всю глубину этой папки
+find "$TARGET_DIR" -type f -name "*.sh" | while read -r FILE; do
+    PERMISSIONS=$(ls -l "$FILE" | awk '{print $1}')
+    echo "Найдено: $(basename "$FILE") с правами $PERMISSIONS"
+    chmod +x "$FILE"
+    echo "--> Права +x добавлены"
+done
