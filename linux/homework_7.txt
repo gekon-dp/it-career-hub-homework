@@ -1,0 +1,26 @@
+Filesystem                Size      Used Available Use% Mounted on
+/dev/root                 5.0G      1.5G      3.5G  31% /
+devtmpfs                116.3M         0    116.3M   0% /dev
+Скрипт запущен из директории: /tmp
+   0 pwd
+   1 cd /tmp
+   2 ls
+   3 df -h
+   4 > file.txt
+   5 ls
+   6 df -h | head -n 3 >> file.txt
+   7 cat file.txt 
+   8 chmod g+wx file.txt
+   9 ls
+  10 ls -l file.txt
+  11 chmod o-rwx file.txt
+  12 ls -l file.txt
+  13 > myfirstbashscript.sh
+  14 ls
+  15 chmod +x myfirstbashscript.sh 
+  16 ls -l
+  17 USER="Kostiantyn"
+  18 echo "Скрипт запущен из директории: $PWD" >> myfirstbashscript.sh 
+  19 cat myfirstbashscript.sh 
+  20 cat myfirstbashscript.sh >> /tmp/file.txt 
+  21 history >> /tmp/file.txt 
