@@ -1,0 +1,19 @@
+  140  git clone git@github.com:gekon-dp/linux-homework-12.git
+  141  git checkout -b feature
+  142  cd linux-homework-12/
+  143  git checkout -b feature
+  144  > README.md
+  145  ls -al
+  146  nano README.md 
+  147  nano .gitignore
+  148  git status
+  149  git add .
+  150  git commit -m "made Readme.md and changed gitignore"
+  151  git push origin feature
+  152  git commit --amend -m "made Redame file and changed gitignore"
+  153  git push origin feature --force-with-lease
+  154  git commit --amend -m "made Redame file and changed gitignore ammend"
+  155  git push origin feature --force-with-lease
+  156  git switch main
+  157  git merge feature
+  158  history > history.txt
