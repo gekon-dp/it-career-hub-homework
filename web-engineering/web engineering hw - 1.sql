@@ -1,0 +1,10 @@
+use northwind;
+select * from suppliers;
+select * from suppliers where company ='Supplier A';
+select * from purchase_orders;
+select id from suppliers where company ='Supplier B';
+select * from purchase_orders where supplier_id = 2;
+select id from employees where last_name = 'Sergienko' and first_name = 'Mariya';
+select * from purchase_orders where supplier_id = 2 and created_by = 4;
+select id, first_name, last_name, job_title from employees where last_name like '_%s%_';
+select id, employee_id, customer_id, order_date, shipper_id from orders where shipper_id is NULL;
