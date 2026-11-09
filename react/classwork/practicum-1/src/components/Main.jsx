@@ -5,6 +5,7 @@
 import Text from "./Text";
 import Lists from "./Lists";
 import Pictures from "./Pictures";
+import LinkButton from "./LinkButton";
 
 function Main() {
   return (
@@ -13,6 +14,7 @@ function Main() {
       <Lists></Lists>
       <Pictures></Pictures>
       <Pictures></Pictures>
+      <LinkButton></LinkButton>
     </div>
   );
 }

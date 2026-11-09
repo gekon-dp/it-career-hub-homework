@@ -1,6 +1,13 @@
-// Создайте компонент "Footer", он послужит футером нашего сайта. На данном этапе оставим его содержимое пустым.
+import FooterText from "./FooterText";
+import FooterLinks from "./FooterLinks";
 
 function Footer() {
-  return <p>Произвольный текст</p>;
+  return (
+    <div>
+      <p>Произвольный текст</p>
+      <FooterText />
+      <FooterLinks />
+    </div>
+  );
 }
 export default Footer;
