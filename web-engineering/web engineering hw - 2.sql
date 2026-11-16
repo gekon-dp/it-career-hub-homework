@@ -1,9 +1,9 @@
 use northwind;
 select * , quantity * unit_price as total_price from order_details where purchase_order_id is null;
 
-select CONCAT(first_name, ' ', last_name) from employees LIMIT 3 OFFSET 2;
+select CONCAT(first_name, ' ', last_name) as full_name from employees LIMIT 3 OFFSET 1;
 
-select LEFT(order_date, 7) from orders;
+select LEFT(order_date, 7) as order_month from orders;
 
 select DISTINCT company from customers ORDER BY company DESC;
 
