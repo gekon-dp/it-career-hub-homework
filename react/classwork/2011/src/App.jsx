@@ -1,25 +1,26 @@
 import { useEffect, useState } from "react";
-
 function App() {
-  const [seconds, setSeconds] = useState(0);
+  const [text, setText] = useState("");
+  const [backgroundColor, setBackgroundColor] = useState("white");
   useEffect(() => {
-    console.log("effect run");
-    const timerId = setInterval(() => {
-      setSeconds((prev) => prev + 1);
-    }, 1000);
-    return () => {
-      console.log("effect cleanup");
-      clearInterval(timerId);
-    };
-  }, []);
-
-  console.log("render app");
-
+    if (text.length < 5) {
+      setBackgroundColor("lightblue");
+    } else if (text.length < 10) {
+      setBackgroundColor("lightgreen");
+    } else {
+      setBackgroundColor("salmon");
+    }
+  }, [text]);
   return (
     <div>
-      <h2>Seconds: {seconds}</h2>
+      <h1>Изменение цвета фона в зависимости от длины текста</h1>
+      <input
+        type="text"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        style={{ backgroundColor }}
+      />
     </div>
   );
 }
-
 export default App;
