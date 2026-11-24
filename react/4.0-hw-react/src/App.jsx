@@ -1,6 +1,7 @@
 import { useState } from "react";
-import CitySelector from "./assets/components/citySelector";
-import CityCard from "./assets/components/cityCard";
+import CitySelector from "./components/citySelector/index.jsx";
+import CityCard from "./components/cityCard/index.jsx";
+import MathQuiz from "./components/mathQuiz/index.jsx";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <h1>Города Японии</h1>
       <CitySelector onSelectCity={setSelectedCity} />
       <CityCard city={selectedCity} />
+      <MathQuiz />
     </div>
   );
 }
