@@ -1,0 +1,93 @@
+import styles from "./styles.module.css";
+
+const citiesData = [
+  {
+    name: "Токио",
+    description:
+      "Столица Японии, известная своими неоновыми огнями, многолюдностью и современной архитектурой.",
+    imageUrl:
+      "https://www.topmagazine.cz/wp-content/uploads/2021/06/tokio-1024x576.jpg",
+    facts: [
+      "Токио - самый населенный мегаполис в мире.",
+      "Здесь расположена самая высокая башня в Японии - Токийская башня.",
+      "В Токио проходят множество культурных событий и фестивалей.",
+    ],
+  },
+  {
+    name: "Киото",
+    description:
+      "Город на острове Хонсю, известный своими многочисленными классическими буддийскими храмами, а также садами, императорскими дворцами, синтоистскими святилищами и традиционными деревянными домами.",
+    imageUrl:
+      "https://mykaleidoscope.ru/x/uploads/posts/2022-09/1663423488_24-mykaleidoscope-ru-p-kioto-stolitsa-yaponii-instagram-25.jpg",
+    facts: [
+      "В Киото насчитывается более 1600 буддийских храмов.",
+      "Этот город был столицей Японии более тысячи лет.",
+    ],
+  },
+  {
+    name: "Осака",
+    description:
+      "Город в центральной части острова Хонсю, известен своими современными достопримечательностями и активной ночной жизнью.",
+    imageUrl:
+      "https://sportishka.com/uploads/posts/2022-04/1650631594_29-sportishka-com-p-osaka-gorod-v-yaponii-krasivo-foto-30.jpg",
+    facts: [
+      "Осака известна своим замком, который играл ключевую роль в объединении Японии в XVI веке.",
+      "Город является кулинарной столицей Японии.",
+    ],
+  },
+  {
+    name: "Хоккайдо",
+    description:
+      "Самый северный остров Японии, известный своей природой, снежными фестивалями и уникальной культурой.",
+    imageUrl:
+      "http://i1.wallbox.ru/wallpapers/main2/202201/nebo-ozero-gory-aponia-hokkajdo-asahi.jpg",
+    facts: [
+      "Хоккайдо предлагает отличные условия для зимних видов спорта, особенно для лыжного спорта и сноубординга.",
+      "Летом остров привлекает туристов своими цветущими лавандовыми полями.",
+    ],
+  },
+  {
+    name: "Нагоя",
+    description:
+      "Город в центре Хонсю, известен своим отраслевым влиянием и историческими достопримечательностями.",
+    imageUrl:
+      "https://www.jalan.net/jalan/images/pict3L/Y1/Y329551/Y329551055.jpg",
+    facts: [
+      "Нагоя - один из важнейших промышленных городов Японии, центр автомобилестроения.",
+      "Здесь находится известный Нагойский замок с позолоченными делфинами на крыше.",
+    ],
+  },
+];
+
+function CitySelector({ onSelectCity }) {
+  const handleChange = (event) => {
+    const selectedName = event.target.value;
+    const foundCity =
+      citiesData.find((city) => city.name === selectedName) || null;
+    onSelectCity(foundCity);
+  };
+
+  return (
+    <form className={styles.selectorForm}>
+      <label htmlFor="city-select" className={styles.label}>
+        Выберите город:
+      </label>
+      <select
+        id="city-select"
+        onChange={handleChange}
+        defaultValue=""
+        className={styles.select}>
+        <option value="" disabled>
+          -- Нажмите, чтобы выбрать --
+        </option>
+        {citiesData.map((city) => (
+          <option key={city.name} value={city.name}>
+            {city.name}
+          </option>
+        ))}
+      </select>
+    </form>
+  );
+}
+
+export default CitySelector;

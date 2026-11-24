@@ -1,0 +1,13 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.app-container h1 {
+  margin-bottom: 24px;
+  color: #0f172a;
+}
