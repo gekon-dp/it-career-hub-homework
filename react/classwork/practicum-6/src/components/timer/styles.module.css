@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 24px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #dbeafe 0%, #c7d2fe 50%, #f5d0fe 100%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.display {
+  width: 100%;
+  margin: 0;
+  padding: 28px 16px;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 56px;
+  font-weight: 800;
+  color: #22c55e;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  user-select: none;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #16a34a;
+  background-color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.btn:hover:not(:disabled) {
+  background-color: #ffffff;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

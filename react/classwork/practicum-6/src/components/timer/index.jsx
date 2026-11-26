@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "./styles.module.css";
 
 function Timer() {
   const [seconds, setSeconds] = useState(0);
@@ -14,15 +15,29 @@ function Timer() {
     }
 
     return () => clearInterval(intervalId);
-  }, [active, seconds]);
+  }, [active]);
 
   return (
-    <div>
-      <h1>{seconds}</h1>
-      <div>
-        <button onClick={() => setActive(true)}>Start</button>
-        <button onClick={() => setActive(false)}>Stop</button>
+    <div className={styles.container}>
+      <h1 className={styles.display}>{seconds}</h1>
+      <div className={styles.controls}>
         <button
+          type="button"
+          className={styles.btn}
+          onClick={() => setActive(true)}
+          disabled={active}>
+          Start
+        </button>
+        <button
+          type="button"
+          className={styles.btn}
+          onClick={() => setActive(false)}
+          disabled={!active}>
+          Stop
+        </button>
+        <button
+          type="button"
+          className={styles.btn}
           onClick={() => {
             setActive(false);
             setSeconds(0);
