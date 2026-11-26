@@ -1,0 +1,39 @@
+.noteItem {
+  background-color: #dbeafe;
+  border-radius: 6px;
+  padding: 12px 14px;
+  transition: background-color 0.2s ease;
+}
+
+.noteItem:hover {
+  background-color: #eff6ff;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.text {
+  font-size: 14px;
+  color: #1e293b;
+  word-break: break-word;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #64748b;
+  opacity: 0.75;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #3b82f6;
+  cursor: pointer;
+  flex-shrink: 0;
+}

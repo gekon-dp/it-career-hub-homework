@@ -1,22 +1,25 @@
 import { useState } from "react";
-import "./App.css";
 import Form from "./components/Form";
+import NoteForm from "./components/noteForm";
+import NoteList from "./components/noteList";
+import "./App.css";
 
 function App() {
-  const [color, setColor] = useState("black");
+  const [color, setColor] = useState("");
+  const [notes, setNotes] = useState([]);
 
-  console.log("render App");
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        backgroundColor: color,
-      }}>
-      <Form setColor={setColor} />
+    <div className="app" style={color ? { background: color } : undefined}>
+      <div className="colorBox">
+        <Form setColor={setColor} />
+      </div>
+
+      <div className="notesCard">
+        <NoteForm setNotes={setNotes} />
+        <NoteList notes={notes} />
+      </div>
     </div>
   );
 }
+
 export default App;
