@@ -1,13 +1,13 @@
 import MovieCard from "../movieCard";
 
 function MoviesDisplay({ moviesData }) {
-  console.log(moviesData);
   return (
-    <ul>
-      {moviesData.map((movies) => {
-        return <MovieCard key={movies.id} {...movies} />;
-      })}
+    <ul className="MoviesDisplay">
+      {moviesData.map((movie) => (
+        <MovieCard key={movie.id} {...movie} />
+      ))}
     </ul>
   );
 }
+
 export default MoviesDisplay;

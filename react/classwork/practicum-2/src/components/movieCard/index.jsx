@@ -1,9 +1,10 @@
 function MovieCard({ title, year }) {
   return (
-    <li>
+    <li className="MovieCard">
+      <span className="MovieCard__year">{year}</span>
       <h3>{title}</h3>
-      <h4>Year: {year}</h4>
     </li>
   );
 }
+
 export default MovieCard;
