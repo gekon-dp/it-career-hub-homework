@@ -1,18 +1,16 @@
-import styles from "../../../src/app.module.css";
+import styles from "../../app.module.css";
+
 function Header({ theme, setTheme }) {
   return (
-    <>
-      <div className={theme === "light" ? styles.light : styles.dark}>
-        <h1>Заголовок сайта</h1>
-        <button
-          className="ThemeSwitcher"
-          onClick={() => {
-            theme === "light" ? setTheme("dark") : setTheme("light");
-          }}>
-          Theme change
-        </button>
-      </div>
-    </>
+    <header className={styles.header}>
+      <h1 className={styles.siteTitle}>My Workspace</h1>
+      <button
+        type="button"
+        className={styles.themeBtn}
+        onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+        {theme === "light" ? "🌙 Dark mode" : "☀️ Light mode"}
+      </button>
+    </header>
   );
 }
 

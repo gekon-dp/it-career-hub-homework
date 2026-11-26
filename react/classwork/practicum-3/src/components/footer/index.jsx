@@ -1,9 +1,11 @@
-import styles from "../../../src/app.module.css";
-function Footer({ theme }) {
+import styles from "../../app.module.css";
+
+function Footer() {
   return (
-    <div className={theme === "light" ? styles.light : styles.dark}>
-      <p>Copyright</p>
-    </div>
+    <footer className={styles.footer}>
+      <span>© 2026 My Workspace</span>
+      <span>Practicum 3 • React</span>
+    </footer>
   );
 }
 
